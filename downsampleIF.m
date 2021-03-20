@@ -105,39 +105,5 @@ function [n_f,IF] = downsample(n_i,IF,ds)
         IFnew.z_top_ECEF = 0;
     end
     
-    
-%     while (t_check == time)&&(n<leng)
-%         X(s) = t.X(n);
-%         Y(s) = t.Y(n);
-%         Z(s) = t.Z(n);
-%         B(s) = t.B(n);
-%         
-%         f1_2 = (1575.42*(10^6))^2;
-%         f2_2 = (1227.60*(10^6))^2;
-% 
-%         
-%         a = f1_2/(f1_2 - f2_2);
-%         b = f2_2/(f1_2 - f2_2);
-%         c = f1_2*f2_2/(f2_2 - f1_2);
-%         AIF(s) = c*(t.P_L1(n) - t.P_L2(n));
-%         P(s) = a*t.P_L1(n) - b*t.P_L2(n);
-%         timeIF(s) = t.tr(n);
-%         s = s+1;
-%         svid(s) = t.prn(n);
-%         
-%         n = n + 1;
-%         t_check = t.tr(n);
-%     end
-%     
-%     ID = svid(2:end);
-%     n_f = n;
-%     
-%     IF.Svid = ID';
-%     IF.time = timeIF';
-%     IF.A = AIF';
-%     IF.P = P';
-%     IF.X = X';
-%     IF.Y = Y';
-%     IF.Z = Z';
       
 end
